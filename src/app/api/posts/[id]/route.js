@@ -9,11 +9,7 @@ export async function GET(request) {
 
   const posts = await response.json()
 
-  console.log('posts', posts)
-
   const post = find(posts, { id })
-
-  console.log('post', post)
 
   return Response.json({ post })
 }
